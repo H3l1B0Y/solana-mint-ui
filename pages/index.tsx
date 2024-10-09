@@ -26,6 +26,19 @@ if (!process.env.NEXT_PUBLIC_RPC_ENDPOINT)
     "No RPC endpoint. Please, provide a NEXT_PUBLIC_RPC_ENDPOINT env variable"
   )
 
+  const allowList = [
+    {
+      groupName: "WL",
+      wallets: [
+      ],
+    },
+    {
+      groupName: "DL",
+      wallets: [
+      ],
+    },
+  ];
+
 // Use the RPC endpoint of your choice.
 const umi = createUmi(process.env.NEXT_PUBLIC_RPC_ENDPOINT).use(
   mplCandyMachine()
