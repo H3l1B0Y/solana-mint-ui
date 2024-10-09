@@ -18,7 +18,7 @@ import { transactionBuilder, generateSigner } from "@metaplex-foundation/umi"
 import { useWallet } from "@solana/wallet-adapter-react"
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui"
 import Head from "next/head"
-
+import { getMerkleProof } from '@metaplex-foundation/js';
 import { fromTxError } from "@/utils/errors"
 
 if (!process.env.NEXT_PUBLIC_RPC_ENDPOINT)
